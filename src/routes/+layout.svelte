@@ -5,7 +5,7 @@
 </script>
 
 <Header />
-<div class="min-h-screen bg-[#111111] ">
+<div class="min-h-screen bg-[#111111]">
 	<slot />
 </div>
 <Footer />
@@ -14,5 +14,6 @@
 	:gloobal(body) {
 		font-family: 'Maven Pro', sans-serif;
 		background-color: #111111;
+		padding-bottom: 50px;
 	}
 </style>
