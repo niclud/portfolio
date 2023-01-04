@@ -5,7 +5,7 @@
 	"homepage": "http://niclud.github.io/portfolio/",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "BASE_URL=/portfolio vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
