@@ -10,11 +10,7 @@
 
 <a {href} on:click={handleClick}>
 	<div class="px-4 grid place-content-center text-white">
-		<h2
-			class=" text-lg text-center uppercase font-bold {active
-				? 'text-red-700 decoration-red-700'
-				: ''}"
-		>
+		<h2 class=" text-lg text-center uppercase font-bold hover:opacity-70">
 			{label}
 		</h2>
 	</div>

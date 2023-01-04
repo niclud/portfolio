@@ -1,5 +1,5 @@
-<footer class=" bg-white px-20 h-16">
-	<div class="grid grid-flow-col items-center h-full">
+<footer class="relative">
+	<div class="grid grid-flow-col items-center h-16 px-20 bg-white">
 		<p>Copyright © 2022. Nicolas Ludueña</p>
 		<div class="justify-self-end grid grid-flow-col gap-4 text-2xl">
 			<a
