@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from '../components/Button.svelte';
 	import ProjectSlider from '../components/ProjectSlider.svelte';
+	import TableroTateti from '../components/TableroTateti.svelte';
 </script>
 
 <div class="relative w-screen h-screen">
@@ -26,11 +27,7 @@
 	<h2 class="text-white uppercase text-4xl font-bold text-center">Acerca de mí</h2>
 	<div class=" flex flex-col sm:flex sm:flex-row ">
 		<div class="sm:w-1/2 grid place-content-center ">
-			<img
-				src="https://pps.whatsapp.net/v/t61.24694-24/309911406_152707060425191_7566008590557575580_n.jpg?ccb=11-4&oh=01_AdTIkmm4fAQLvikuUUFobLpa3rMy7hZfNRrxQDOGUNVm-A&oe=63BB312B"
-				alt="Foto mia"
-				class="px-10 pt-10"
-			/>
+			<img src="images/fotomia.jpg" alt="Foto mia" class="px-10 pt-10" />
 		</div>
 		<div class="sm:w-1/2 grid items-center px-10 pt-10 text-white place-content-center gap-5">
 			<div>
@@ -89,6 +86,9 @@
 	<h2 class="text-white uppercase text-4xl font-bold text-center pt-6">proyectos</h2>
 
 	<ProjectSlider />
+</div>
+<div class="h-screen w-screen grid place-content-center">
+	<TableroTateti />
 </div>
 
 <style>
