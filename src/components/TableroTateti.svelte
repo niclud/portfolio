@@ -29,7 +29,6 @@
 	const setPos = (pos: number, player: string) => {
 		posiciones[pos].isTaken = true;
 		posiciones[pos].player = player;
-		return;
 	};
 	const getPos = (pos: number, option: number) => {
 		if (option === 1) return posiciones[pos].isTaken;
@@ -37,21 +36,19 @@
 	};
 
 	const checkBox = (pos: number) => {
-		if (posiciones.every((posi) => posi.isTaken)) {
-			return;
-		}
 		if (posiciones[pos].isTaken === true) {
 			return;
 		}
 		setPos(pos, 'player');
-		checkBoxMachine(pos);
+		checkBoxMachine();
 		checkWin2();
 		console.log(posiciones);
 	};
-	const checkBoxMachine = (pos: number) => {
+	const checkBoxMachine = () => {
 		if (!getPos(4, 1)) {
 			setPos(4, 'comp');
 		} else {
+			defenderGame();
 		}
 	};
 	const checkWin2 = () => {
@@ -64,12 +61,45 @@
 					}
 				}
 			});
-			if (aux2.every((a) => a === 'player') && aux2.length === 3) {
+			if (aux2.every((a) => a === aux2[0]) && aux2.length === 3) {
 				console.log('lo lograste nico');
 				return;
 			}
 			aux2 = [];
 		});
+	};
+	const IAGame = (attacker: string) => {
+		let aux: boolean = false;
+		let aux3: boolean = false;
+		let aux4: number = -1;
+		winResults.forEach((res) => {
+			res.forEach((pos, indice) => {
+				if (posiciones[pos].isTaken && posiciones[pos].player === attacker && indice === 0) {
+					aux = true;
+				} else if (aux && posiciones[pos].player === attacker && indice === 1) {
+					aux3 = true;
+				} else if (aux && aux3 && indice === 2 && !posiciones[pos].isTaken) {
+					aux4 = pos;
+					return;
+				}
+			});
+			aux = false;
+			aux3 = false;
+		});
+		return aux4;
+	};
+	const attackGame = () => {
+		let pos = IAGame('comp');
+		if (pos !== -1) {
+			setPos(pos, 'comp');
+		}
+	};
+	const defenderGame = () => {
+		let pos = IAGame('player');
+		console.log(pos);
+		if (pos !== -1) {
+			setPos(pos, 'comp');
+		}
 	};
 </script>
 

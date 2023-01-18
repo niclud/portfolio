@@ -49,7 +49,7 @@
 	];
 </script>
 
-<div class="m-20 h-[550px]">
+<div class="m-6 h-[550px]">
 	<Swiper
 		effect={'coverflow'}
 		grabCursor={false}

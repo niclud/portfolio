@@ -1,4 +1,4 @@
-<footer class="relative">
+<footer class="relative border border-red-600">
 	<div class="grid grid-flow-col items-center h-16 px-20 bg-white">
 		<p>Copyright © 2022. Nicolas Ludueña</p>
 		<div class="justify-self-end grid grid-flow-col gap-4 text-2xl">

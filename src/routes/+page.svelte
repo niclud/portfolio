@@ -1,13 +1,14 @@
 <script lang="ts">
+	import Contactame from '../components/Contactame.svelte';
 	import Button from '../components/Button.svelte';
 	import ProjectSlider from '../components/ProjectSlider.svelte';
 	import TableroTateti from '../components/TableroTateti.svelte';
 </script>
 
-<div class="relative w-screen h-screen">
+<div class="relative h-screen">
 	<div class="absolute w-full h-full">
-		<img src="images/digitization.jpg" alt="" class="w-full h-full object-cover" />
-		<div class="absolute top-0 left-0 w-full h-full bg-black/50 " />
+		<img src="images/digitization.jpg" alt="" class=" w-full h-full object-cover" />
+		<div class="absolute top-0 left-0 w-full h-full bg-black/75 " />
 	</div>
 	<div class="w-full h-full pt-16 grid place-content-center">
 		<div class="text-center max-w-md z-10">
@@ -18,23 +19,25 @@
 				download="Curriculum Vitae Ludueña Nicolas"
 				title="Descargar cv"
 			>
-				<Button>Descargar CV</Button>
+				<div class="mt-3">
+					<Button>Descargar CV</Button>
+				</div>
 			</a>
 		</div>
 	</div>
 </div>
-<div class="w-screen h-screen grid grid-flow-row items-center" id="acercademi">
+<div class="w-screen h-screen grid grid-flow-row items-center my-6 " id="acercademi">
 	<h2 class="text-white uppercase text-4xl font-bold text-center">Acerca de mí</h2>
 	<div class=" flex flex-col sm:flex sm:flex-row ">
-		<div class="sm:w-1/2 grid place-content-center ">
-			<img src="images/fotomia.jpg" alt="Foto mia" class="px-10 pt-10" />
+		<div class="sm:w-1/2 grid place-content-center px-10 pt-10 ">
+			<img src="images/fotomia.jpg" alt="Foto mia" class="object-cover" />
 		</div>
-		<div class="sm:w-1/2 grid items-center px-10 pt-10 text-white place-content-center gap-5">
+		<div class="sm:w-1/2 grid items-center text-white place-content-center gap-5">
 			<div>
 				<h2 class="text-2xl font-bold">Nicolás Ludueña</h2>
 				<h3 class="text-base font-semibold">Front End Developer</h3>
 			</div>
-			<p class="text-base">
+			<p class="text-base w-[90%] text-justify">
 				Actualmente me encuentro finalizando segundo año de Ing. en sistemas de información y
 				trabajando de manera freelance para un emprendimiento que empezamos con compañeros de la
 				facultad donde realizamos proyectos de desarrollo web. Estoy en la búsqueda de mi primera
@@ -82,13 +85,13 @@
 		</div>
 	</div>
 </div>
-<div class="w-screen h-screen" id="proyectos">
+<div class="w-screen" id="proyectos">
 	<h2 class="text-white uppercase text-4xl font-bold text-center pt-6">proyectos</h2>
 
 	<ProjectSlider />
 </div>
-<div class="h-screen w-screen grid place-content-center">
-	<TableroTateti />
+<div class=" grid grid-flow-row items-center" id="contactame">
+	<Contactame />
 </div>
 
 <style>

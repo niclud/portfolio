@@ -6,7 +6,7 @@
 <button
 	{type}
 	{disabled}
-	class="bg-red-600 hover:bg-red-400 p-2 rounded-lg text-white shadow-lg m-5"
+	class="bg-red-600 hover:bg-red-400 p-2 rounded-lg text-white shadow-lg w-40"
 >
 	<slot />
 </button>
