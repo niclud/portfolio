@@ -1,10 +1,10 @@
-<footer class="relative border border-red-600">
+<footer class="relative border ">
 	<div class="grid grid-flow-col items-center h-16 px-20 bg-white">
 		<p>Copyright © 2022. Nicolas Ludueña</p>
 		<div class="justify-self-end grid grid-flow-col gap-4 text-2xl">
 			<a
 				class="uppercase font-semibold transition-all opacity-80 hover:opacity-100"
-				href="/#"
+				href="https://wa.me/+5493534172833"
 				target="_BLANK"
 			>
 				<i class="fa-brands fa-whatsapp" />

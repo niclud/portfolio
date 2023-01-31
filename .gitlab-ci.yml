@@ -1,0 +1,51 @@
+stages:
+  - install
+  - test
+  - deploy
+
+default:
+  image: niclud/lighting-node:v1
+
+# == Cache
+
+.node_modules-cache: &node_modules-cache
+  key:
+    files:
+      - package-lock.json
+  paths:
+    - node_modules
+
+# == Jobs
+
+install_dependencies:
+  stage: install
+  variables:
+    FF_USE_FASTZIP: 'true'
+    CACHE_COMPRESSION_LEVEL: 'fast'
+  script:
+    - npm ci
+  cache:
+    - <<: *node_modules-cache
+      policy: push
+  only:
+    changes:
+      - package-lock.json
+
+pages:
+  stage: deploy
+  variables:
+    VITE_CLOUD_CMS_BRANCH: portfolio-dev
+    VITE_CLOUD_CMS_APP_ID: e0be8ccc024e15df386cb4dc8c043c1ab1dea1f4ff630ddd71647858837d4b9b
+  script:
+    - echo $BASE_URL
+    - npm run build
+    - cp -a build/. public
+  cache:
+    - <<: *node_modules-cache
+      policy: pull
+  artifacts:
+    paths:
+      - public
+  only:
+    refs:
+      - main
