@@ -4,7 +4,7 @@ stages:
   - deploy
 
 default:
-  image: saez-juan/lighting-node:v1
+  image: saezjuan/lighting-node:v1
 
 # == Cache
 
