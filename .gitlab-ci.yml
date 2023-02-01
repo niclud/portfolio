@@ -4,7 +4,7 @@ stages:
   - deploy
 
 default:
-  image: niclud/lighting-node:v1
+  image: saez-juan/lighting-node:v1
 
 # == Cache
 
@@ -33,11 +33,7 @@ install_dependencies:
 
 pages:
   stage: deploy
-  variables:
-    VITE_CLOUD_CMS_BRANCH: portfolio-dev
-    VITE_CLOUD_CMS_APP_ID: e0be8ccc024e15df386cb4dc8c043c1ab1dea1f4ff630ddd71647858837d4b9b
   script:
-    - echo $BASE_URL
     - npm run build
     - cp -a build/. public
   cache:
