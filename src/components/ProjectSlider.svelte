@@ -16,21 +16,21 @@
 			description:
 				'E-commerce realizado con el grupo de trabajo de Transformance Agency. Tecnologias: Svelte - JS - HTML - CSS - Tailwind - Shopify',
 			href: 'https://primer-mate.clients.transformanceagency.com',
-			image: 'images/primermate.jpeg'
+			image: '/portfolio/images/primermate.jpeg'
 		},
 		{
 			title: 'landing para Escuela de Surf',
 			description:
 				'Landing page para escuela de surf. Trabajo realizado en conjunto con Taps Developers. Tecnologias Svelte - JS - HTML - CSS - Tailwind',
 			href: 'https://nalusurf.taps.digital/',
-			image: 'images/nalusurf.jpeg'
+			image: '/portfolio/images/nalusurf.jpeg'
 		},
 		{
 			title: 'Proyecto personal TaskList',
 			description:
 				'Organizador de tareas diarias aplicando CRUD en cada tarea y poder agregarle una descripción y fecha limite a las tareas. Realizandolo con React',
 			href: 'https://niclud.github.io/tasklist/',
-			image: 'images/tasklist.jpeg'
+			image: '/portfolio/images/tasklist.jpeg'
 		},
 		{
 			title: 'Escuela de Surf',

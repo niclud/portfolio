@@ -7,7 +7,7 @@
 
 <div class="relative h-screen">
 	<div class="absolute w-full h-full">
-		<img src="images/digitization.jpg" alt="" class=" w-full h-full object-cover" />
+		<img src="/portfolio/images/digitization.jpg" alt="" class=" w-full h-full object-cover" />
 		<div class="absolute top-0 left-0 w-full h-full bg-black/75 " />
 	</div>
 	<div class="w-full h-full pt-16 grid place-content-center">
@@ -30,7 +30,7 @@
 	<h2 class="text-white uppercase text-4xl font-bold text-center">Acerca de mí</h2>
 	<div class=" flex flex-col sm:flex sm:flex-row ">
 		<div class="sm:w-1/2 grid place-content-center px-10 pt-10 ">
-			<img src="images/fotomia.jpg" alt="Foto mia" class="object-cover" />
+			<img src="/portfolio/images/fotomia.jpg" alt="Foto mia" class="object-cover" />
 		</div>
 		<div class="sm:w-1/2 grid items-center text-white place-content-center gap-5">
 			<div>
